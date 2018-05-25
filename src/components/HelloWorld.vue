@@ -84,8 +84,7 @@
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
+export default class HelloWorld extends Vue{
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
