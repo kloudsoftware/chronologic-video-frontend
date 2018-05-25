@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -84,13 +83,11 @@
 </template>
 
 <script>
-export default class HelloWorld extends Vue{
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  import { Component, Vue } from 'vue-property-decorator';
+
+
+  export default class HelloWorld extends Vue {
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

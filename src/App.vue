@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <navbar></navbar>
-    <div><p></p></div>
     <router-view/>
   </div>
 </template>
 
 <script>
+
+  import { Component, Prop, Vue } from 'vue-property-decorator';
 
   import Navbar from './components/partials/Navbar.vue';
 
@@ -16,7 +17,7 @@
     }
   })
 
-  export default class App{
+  export default class App extends Vue {
   }
 </script>
 

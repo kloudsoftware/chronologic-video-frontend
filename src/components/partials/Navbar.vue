@@ -33,6 +33,7 @@
   @Component({
     name: "Navbar"
   })
+
   export default class Navbar extends Vue {
   }
 </script>
