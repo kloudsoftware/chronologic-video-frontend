@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:vue/essential",
+    "@vue/airbnb",
+    "@vue/typescript"
+  ],
+  "rules": {
+    "max-len": 0,
+    "indent": 0,
+    "no-mixed-spaces-and-tabs": 0
+  }
+}

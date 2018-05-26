@@ -1,0 +1,146 @@
+*,
+*:after,
+*:before {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.table-component {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  -webkit-box-shadow: 4px 5px 5px -2px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 4px 5px 5px -2px rgba(0, 0, 0, 0.23);
+  box-shadow: 4px 5px 5px -2px rgba(0, 0, 0, 0.23);
+}
+
+.table-component__filter {
+  align-self: flex-end;
+}
+
+.table-component__filter__field {
+  margin-top: 1em;
+  margin-right: 1em;
+  padding: 0 1.25em 0 .75em;
+  height: 2.5em;
+  border: solid 1px #e0e0e0;
+  font-size: inherit;
+}
+
+.table-component__filter__clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  color: gray;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.table-component__filter__field:focus {
+  outline: 0;
+}
+
+table tr th {
+  padding-bottom: 1em;
+  /* border-bottom: 1px solid grey; */
+  padding-top: 1em;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+
+.table-component__table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.table-component__table {
+  min-width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table-component__table__caption {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+
+.table-component__table th,
+.table-component__table td {
+  padding: .35em 1.25em;
+  vertical-align: center;
+  text-align: left;
+}
+
+.table-component__table th {
+  font-weight: normal;
+  color: darkgrey;
+  white-space: nowrap;
+}
+
+
+/*table tr th:nth-child(2) {*/
+  /*background: #f4f4f4;*/
+  /*font-weight: bold;*/
+  /*color: grey;*/
+/*}*/
+
+/*table tr td:nth-child(2) {*/
+  /*background: #f4f4f4;*/
+  /*font-weight: bold;*/
+/*}*/
+
+
+table tr th {
+  /* font-size: .8em; */
+}
+
+.table-component__table a {
+  color: #007593;
+}
+
+.table-component__message {
+  color: #999;
+  font-style: italic;
+}
+
+.table-component__th--sort,
+.table-component__th--sort-asc,
+.table-component__th--sort-desc {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.table-component__th--sort-asc:after,
+.table-component__th--sort-desc:after {
+  position: absolute;
+  left: .25em;
+  display: inline-block;
+  color: black;
+}
+
+.table-component__th--sort-asc:after {
+  content: '↑';
+}
+
+.table-component__th--sort-desc:after {
+  content: '↓';
+}

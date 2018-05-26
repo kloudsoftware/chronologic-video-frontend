@@ -1,4 +1,5 @@
 import Axios, {AxiosRequestConfig, AxiosResponse} from 'axios';
+import Auth from './auth';
 
 enum Method {
     GET,
@@ -53,12 +54,13 @@ export default class Http {
     }
 
     public async fetch(): Promise<AxiosResponse> {
+        const key = Auth.getKey();
+        this.header.set("Authorization", `Bearer ${key}`);
 
         const config: AxiosRequestConfig = {
-            url: Http.getBaseURL() + this.url,
+            url: this.getBaseURL() + this.url,
             method: this.stringifyMethod(),
             headers: this.mapHeaders(),
-
         };
 
         if (this.method !== Method.GET) {
@@ -95,7 +97,7 @@ export default class Http {
         }
     }
 
-    private static getBaseURL(): string {
+    private getBaseURL(): string {
         return "http://localhost:8080/";
     }
 }
